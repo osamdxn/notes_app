@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:notes_app/constants.dart';
 import 'package:notes_app/views/widgets/custom_search_icon.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -10,7 +11,7 @@ class CustomAppBar extends StatelessWidget {
       return Row(
         children: const  [
           SizedBox(height: 75),
-          Text('Notes', style: TextStyle(
+          Text(kAppName, style: TextStyle(
               color: Colors.white,
               fontSize: 23,
            ),
