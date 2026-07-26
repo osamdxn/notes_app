@@ -8,14 +8,8 @@ class NotesView extends StatelessWidget {
    @override
    Widget build(BuildContext context) {
      return Scaffold(
-      // appBar: AppBar(
-      //    actions: [
-      //     Container(
-      //       child: Icon(Icons.search)),
-      //    ],
-      // ),
+     
       body:  NotesViewBody(
-
       ),
      );
    }
