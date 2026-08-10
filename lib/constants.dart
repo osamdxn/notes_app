@@ -2,5 +2,5 @@
  import 'package:flutter/material.dart';
  const kAppName = 'Notes';
  const kEditNamePage ='Edit Note';
- const kPrimaryColor =  Color(0xFFABCFCA);
+ const kPrimaryColor =  Colors.cyan;
  const kNotesBox = 'notes_box';
