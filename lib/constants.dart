@@ -3,3 +3,4 @@
  const kAppName = 'Notes';
  const kEditNamePage ='Edit Note';
  const kPrimaryColor =  Color(0xFFABCFCA);
+ const kNotesBox = 'notes_box';
