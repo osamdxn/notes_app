@@ -1,10 +1,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/views/widgets/edit_note_view.dart';
 
 class CustomNoteItem extends StatelessWidget {
-    const CustomNoteItem({super.key});
+    const CustomNoteItem({super.key, required this.note});
+
+    final NoteModel note ;
     @override
     Widget build(BuildContext context) {
       return GestureDetector(
@@ -16,21 +19,21 @@ class CustomNoteItem extends StatelessWidget {
         child: Container(
           padding: EdgeInsets.only(top: 20,bottom: 14,left: 16),
           decoration: BoxDecoration(
-            color:const Color(0xFFFFD47A),
+            color: Color(note.color),
             borderRadius: BorderRadius.circular(16),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               ListTile(
-                  title: const Text('Flutter Tips',style: TextStyle(
+                  title:  Text(note.title,style: const TextStyle(
                      color: Colors.black,
                      fontSize: 24,
                    ),
                   ),
                   subtitle: Padding(
                     padding: const EdgeInsets.only(top: 16),
-                    child: Text('Build Your Career with  Osama Essa',style: TextStyle(
+                    child: Text(note.subTitle,style: TextStyle(
                        color: Colors.black.withValues(alpha: 0.5),
                        fontSize: 14,
                       ),
@@ -41,8 +44,8 @@ class CustomNoteItem extends StatelessWidget {
                     icon:Icon(FontAwesomeIcons.trash,color: Colors.black,size: 20,)),
               ),
               Padding(
-                padding: const EdgeInsets.only(right: 16),
-                child: Text('May 21 , 2022',style: TextStyle(
+                padding:  EdgeInsets.only(right: 16),
+                child: Text(note.date,style: TextStyle(
                    color:  Colors.black.withValues(alpha: 0.5),
                  )
                 ),
